@@ -1,58 +1,22 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Award, Sparkles } from "lucide-react";
 import { Separator } from "../ui/separator";
-
-gsap.registerPlugin(ScrollTrigger);
+import {
+  animateSectionFadeIn,
+  animateCardsStagger,
+  cleanupScrollTriggers,
+} from "@/lib/gsap-utils";
 
 const Prizes = () => {
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);
 
   useEffect(() => {
-    const sectionEl = sectionRef.current;
+    animateSectionFadeIn(sectionRef.current);
+    animateCardsStagger(cardsRef.current);
 
-    gsap.fromTo(
-      sectionEl,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionEl,
-          start: "top 85%",
-          end: "bottom 40%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-
-    gsap.utils.toArray(cardsRef.current).forEach((card, i) => {
-      gsap.fromTo(
-        card,
-        { opacity: 0, scale: 0.9, y: 40 },
-        {
-          opacity: 1,
-          scale: 1,
-          y: 0,
-          duration: 1,
-          delay: i * 0.1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: card,
-            start: "top 90%",
-            end: "bottom 70%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+    return () => cleanupScrollTriggers();
   }, []);
 
   return (
@@ -60,7 +24,6 @@ const Prizes = () => {
       ref={sectionRef}
       className="relative py-24 bg-black text-white overflow-hidden"
     >
-      {/* Background */}
       <div className="absolute inset-0">
         <video
           src="https://res.cloudinary.com/djrs8vc5s/video/upload/f_auto,q_auto:good/v1730902345/1106_2_-1_ltl6d2.mp4"
@@ -68,13 +31,12 @@ const Prizes = () => {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="none"
           className="w-full h-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/60 to-black" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-light tracking-tight mb-4">
@@ -85,7 +47,6 @@ const Prizes = () => {
           </p>
         </div>
 
-        {/* MAIN PRIZES */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-12">
           {[
             {
@@ -140,7 +101,6 @@ const Prizes = () => {
           ))}
         </div>
 
-        {/* EXTRA AWARDS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <Card
             ref={(el) => (cardsRef.current[3] = el)}

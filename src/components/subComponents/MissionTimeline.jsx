@@ -1,10 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
-
-gsap.registerPlugin(ScrollTrigger);
+import { cleanupScrollTriggers } from "@/lib/gsap-utils";
 
 const MissionTimeline = () => {
   const sectionRef = useRef(null);
@@ -15,7 +13,6 @@ const MissionTimeline = () => {
     const sectionEl = sectionRef.current;
     const videoEl = videoRef.current;
 
-    // 🎥 Background zoom + blur
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionEl,
@@ -38,7 +35,6 @@ const MissionTimeline = () => {
       0
     );
 
-    // 🌀 Alternate fade/slide animations
     gsap.utils.toArray(cardsRef.current).forEach((card, i) => {
       const dir = i % 2 === 0 ? -100 : 100;
       gsap.fromTo(
@@ -60,7 +56,7 @@ const MissionTimeline = () => {
       );
     });
 
-    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
+    return () => cleanupScrollTriggers();
   }, []);
 
   const events = [
@@ -97,7 +93,7 @@ const MissionTimeline = () => {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="none"
           className="w-full h-full object-cover"
           style={{ pointerEvents: "none" }}
         />

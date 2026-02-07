@@ -1,22 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "../ui/button";
 import { Sparkles } from "lucide-react";
-
-gsap.registerPlugin(ScrollTrigger);
+import { cleanupScrollTriggers } from "@/lib/gsap-utils";
 
 const CTA = () => {
   const sectionRef = useRef(null);
   const contentRef = useRef(null);
 
   useEffect(() => {
-    const sectionEl = sectionRef.current;
-    const contentEl = contentRef.current;
-
-    // Zoom + fade effect on scroll
     gsap.fromTo(
-      sectionEl,
+      sectionRef.current,
       { scale: 1.05, opacity: 0 },
       {
         scale: 1,
@@ -24,7 +18,7 @@ const CTA = () => {
         duration: 1.5,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: sectionEl,
+          trigger: sectionRef.current,
           start: "top 90%",
           end: "bottom top",
           toggleActions: "play none none reverse",
@@ -33,7 +27,7 @@ const CTA = () => {
     );
 
     gsap.fromTo(
-      contentEl,
+      contentRef.current,
       { opacity: 0, y: 60 },
       {
         opacity: 1,
@@ -42,11 +36,13 @@ const CTA = () => {
         ease: "power2.out",
         delay: 0.2,
         scrollTrigger: {
-          trigger: contentEl,
+          trigger: contentRef.current,
           start: "top 85%",
         },
       }
     );
+
+    return () => cleanupScrollTriggers();
   }, []);
 
   return (
@@ -54,20 +50,18 @@ const CTA = () => {
       ref={sectionRef}
       className="relative h-[90vh] w-full overflow-hidden bg-black text-white flex items-center justify-center"
     >
-      {/* 🎥 Background Video */}
       <video
         src="https://res.cloudinary.com/djrs8vc5s/video/upload/f_auto,q_auto:good/v1730902345/1106_4_-1_ngskzm.mp4"
         autoPlay
         loop
         muted
         playsInline
-        preload="auto"
+        preload="none"
         className="absolute inset-0 w-full h-full object-cover opacity-60"
         style={{ pointerEvents: "none" }}
       />
       <div className="absolute inset-0 bg-linear-to-t from-black via-black/70 to-transparent" />
 
-      {/* ✨ Content */}
       <div
         ref={contentRef}
         className="relative z-10 text-center max-w-3xl mx-auto px-6"

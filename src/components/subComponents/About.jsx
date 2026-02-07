@@ -1,11 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+import { useEffect, useRef } from "react";
+import { CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Separator } from "../ui/separator";
-import { Sparkles, Trophy, Users, Zap } from "lucide-react";
-
-gsap.registerPlugin(ScrollTrigger);
+import { aboutData } from "@/lib/data/data";
+import { animatePinnedSection, cleanupScrollTriggers } from "@/lib/gsap-utils";
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -13,44 +10,9 @@ const About = () => {
   const contentRef = useRef(null);
 
   useEffect(() => {
-    const sectionEl = sectionRef.current;
-    const videoEl = videoRef.current;
-    const contentEl = contentRef.current;
+    animatePinnedSection(sectionRef.current, videoRef.current, contentRef.current);
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionEl,
-        start: "top top",
-        end: "bottom+=100% top",
-        scrub: 1.5,
-        pin: true,
-      },
-    });
-
-    // Video zoom + blur animation (same as Hero)
-    tl.fromTo(
-      videoEl,
-      { scale: 1, opacity: 1, filter: "blur(0px)" },
-      {
-        scale: 1.25,
-        opacity: 0.4,
-        filter: "blur(4px)",
-        ease: "power3.inOut",
-      },
-      0
-    );
-
-    // Right content fade + slide
-    tl.fromTo(
-      contentEl,
-      { opacity: 1, x: 0 },
-      { opacity: 0, x: 100, ease: "power2.inOut" },
-      0
-    );
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
+    return () => cleanupScrollTriggers();
   }, []);
 
   return (
@@ -58,7 +20,6 @@ const About = () => {
       ref={sectionRef}
       className="relative h-screen w-full overflow-hidden  text-white flex items-center justify-end"
     >
-      {/* Background Video */}
       <video
         ref={videoRef}
         src="https://res.cloudinary.com/djrs8vc5s/video/upload/f_auto,q_auto:good/v1730902345/1106_1_-1_lnv3bn.mp4"
@@ -66,15 +27,13 @@ const About = () => {
         loop
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ pointerEvents: "none" }}
       />
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
 
-      {/* Content (on top of video, aligned right) */}
       <div
         ref={contentRef}
         className="relative z-10 max-w-xl p-6 md:p-10  shadow-2xl rounded-2xl"
@@ -111,28 +70,7 @@ const About = () => {
           </p>
 
           <div className="grid grid-cols-2 gap-4 text-left">
-            {[
-              {
-                icon: <Users className="w-6 h-6 text-white" />,
-                title: "Collaboration",
-                text: "Team up with elite developers.",
-              },
-              {
-                icon: <Zap className="w-6 h-6 text-white" />,
-                title: "Innovation",
-                text: "Build creative solutions.",
-              },
-              {
-                icon: <Trophy className="w-6 h-6 text-white" />,
-                title: "Recognition",
-                text: "Win prizes and mentorship.",
-              },
-              {
-                icon: <Sparkles className="w-6 h-6 text-white" />,
-                title: "Growth",
-                text: "Learn from experts.",
-              },
-            ].map((item, idx) => (
+            {aboutData.map((item, idx) => (
               <div
                 key={idx}
                 className="flex items-start gap-3 bg-white/5 p-3 rounded-md border border-white/10 hover:bg-white/10 transition-all duration-300"
