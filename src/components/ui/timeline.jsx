@@ -1,6 +1,12 @@
-"use client";
+ "use client";
 import { useScroll, useTransform, motion, useSpring } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { DM_Sans } from "next/font/google";
+
+const bodyFont = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
 
 export const Timeline = ({ data }) => {
   const ref = useRef(null);
@@ -50,7 +56,9 @@ export const Timeline = ({ data }) => {
         <h2 className="text-3xl md:text-5xl mb-4 text-white max-w-4xl font-bold">
           Mission Timeline
         </h2>
-        <p className="text-neutral-400 text-sm md:text-base max-w-sm">
+        <p
+          className={`${bodyFont.className} text-neutral-400 text-sm md:text-base max-w-sm`}
+        >
           The Survey Corps battle plans and key milestones.
         </p>
       </div>

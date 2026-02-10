@@ -1,8 +1,19 @@
 import { useEffect, useRef } from "react";
+import { Bebas_Neue, DM_Sans } from "next/font/google";
 import { CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Separator } from "../ui/separator";
 import { aboutData } from "@/lib/data/data";
 import { animatePinnedSection, cleanupScrollTriggers } from "@/lib/gsap-utils";
+
+const sectionHeadingFont = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const aboutBodyFont = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -39,30 +50,35 @@ const About = () => {
         className="relative z-10 max-w-xl p-6 md:p-10  shadow-2xl rounded-2xl"
       >
         <CardHeader>
-          <CardTitle className="text-4xl md:text-5xl mb-4 font-light tracking-wider">
-            Mission Briefing
+          <CardTitle
+            className={`${sectionHeadingFont.className} text-4xl md:text-5xl mb-4 tracking-[0.08em] uppercase font-bold`}
+          >
+            Mission{" "}
+            <span className="bg-gradient-to-r from-[#F8D47A] via-[#E0A743] to-[#C67824] bg-clip-text text-transparent">
+              Briefing
+            </span>
           </CardTitle>
           <Separator className="bg-white/20 mb-4" />
         </CardHeader>
 
         <CardContent className="space-y-6 text-gray-300">
-          <p className="text-base md:text-lg leading-relaxed">
-            <span className="text-white font-semibold">
+          <p className={`${aboutBodyFont.className} text-base md:text-lg leading-relaxed`}>
+            <span className="font-semibold bg-gradient-to-r from-[#F8D47A] via-[#E0A743] to-[#C67824] bg-clip-text text-transparent">
               CLASSIFIED: SCOUT REGIMENT HEADQUARTERS
             </span>
             <br />
             <br />
             The{" "}
-            <span className="text-white font-semibold">
+            <span className="font-semibold bg-gradient-to-r from-[#F8D47A] via-[#E0A743] to-[#C67824] bg-clip-text text-transparent">
               GeeksforGeeks X Elixir Scout Regiment
             </span>{" "}
             commences its mission to reclaim humanity’s digital realm — a
             72-hour operation to push past the limits of innovation.
           </p>
 
-          <p className="text-base md:text-lg leading-relaxed">
+          <p className={`${aboutBodyFont.className} text-base md:text-lg leading-relaxed`}>
             This is{" "}
-            <span className="text-white font-semibold">
+            <span className="font-semibold bg-gradient-to-r from-[#F8D47A] via-[#E0A743] to-[#C67824] bg-clip-text text-transparent">
               humanity’s last stand
             </span>{" "}
             against the titans of outdated code and creative stagnation.
@@ -77,10 +93,16 @@ const About = () => {
               >
                 <div className="flex-shrink-0">{item.icon}</div>
                 <div className="min-w-0">
-                  <h3 className="font-semibold text-white text-sm md:text-base truncate">
+                  <h3
+                    className={`${sectionHeadingFont.className} font-bold text-white text-sm md:text-base tracking-[0.08em] uppercase truncate`}
+                  >
                     {item.title}
                   </h3>
-                  <p className="text-gray-400 text-xs md:text-sm line-clamp-2">{item.text}</p>
+                  <p
+                    className={`${aboutBodyFont.className} text-gray-400 text-xs md:text-sm line-clamp-2`}
+                  >
+                    {item.text}
+                  </p>
                 </div>
               </div>
             ))}

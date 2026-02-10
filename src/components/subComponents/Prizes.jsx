@@ -1,6 +1,12 @@
 import { useRef, useState, useEffect } from "react";
+import { DM_Sans } from "next/font/google";
 import { Award, Trophy, Rocket, Star, Crown, Zap } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+
+const bodyFont = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
 
 const InteractiveCard = ({ children, className = "", spotlightColor = "rgba(255, 255, 255, 0.1)" }) => {
   const ref = useRef(null);
@@ -159,10 +165,13 @@ const Prizes = () => {
              transition={{ duration: 0.6 }}
           >
             <h2 className="text-5xl md:text-7xl tracking-tighter mb-4 text-white">
-              <span className="font-light">Cosmic</span> <span className="font-bold italic">Rewards</span>
+              <span className="font-light">Cosmic</span>{" "}
+              <span className="font-bold italic bg-gradient-to-r from-[#F8D47A] via-[#E0A743] to-[#C67824] bg-clip-text text-transparent">
+                Rewards
+              </span>
             </h2>
           </motion.div>
-          <p className="text-lg text-gray-400 font-light max-w-xl mx-auto">
+          <p className={`${bodyFont.className} text-lg text-gray-400 font-medium max-w-xl mx-auto`}>
             Choose your constellation and embark on an interstellar journey.
           </p>
         </div>
@@ -199,9 +208,12 @@ const Prizes = () => {
 
                 <div className="w-full space-y-3 px-6 mb-auto">
                   {p.perks.map((perk, j) => (
-                    <div key={j} className="flex items-center justify-center gap-2 text-xs md:text-sm text-gray-400 border border-white/5 py-2 rounded-full group-hover:bg-white/5 transition-colors duration-300">
+                    <div
+                      key={j}
+                      className="flex items-center justify-center gap-2 text-xs md:text-sm text-gray-400 border border-white/5 py-2 rounded-full group-hover:bg-white/5 transition-colors duration-300"
+                    >
                       <Star size={10} className="fill-current opacity-50" />
-                      {perk}
+                      <span className={bodyFont.className}>{perk}</span>
                     </div>
                   ))}
                 </div>
@@ -230,8 +242,12 @@ const Prizes = () => {
                 </div>
 
                 <div className="flex flex-col text-left">
-                  <h3 className="text-2xl font-bold text-white leading-tight">Track Winners</h3>
-                  <p className="text-gray-400 text-sm">Best project in each sector</p>
+                  <h3 className="text-2xl font-bold leading-tight bg-gradient-to-r from-[#F8D47A] via-[#E0A743] to-[#C67824] bg-clip-text text-transparent">
+                    Track Winners
+                  </h3>
+                  <p className={`${bodyFont.className} text-gray-400 text-sm`}>
+                    Best project in each sector
+                  </p>
                   
                   <div className="mt-2">
                     <p className="text-3xl font-bold text-white group-hover:text-blue-200 transition-colors">₹10,000</p>
@@ -261,8 +277,12 @@ const Prizes = () => {
                 </div>
 
                 <div className="flex flex-col text-left">
-                  <h3 className="text-2xl font-bold text-white leading-tight">Special Awards</h3>
-                  <p className="text-gray-400 text-sm">Design, Innovation, & UI</p>
+                  <h3 className="text-2xl font-bold leading-tight bg-gradient-to-r from-[#F8D47A] via-[#E0A743] to-[#C67824] bg-clip-text text-transparent">
+                    Special Awards
+                  </h3>
+                  <p className={`${bodyFont.className} text-gray-400 text-sm`}>
+                    Design, Innovation, & UI
+                  </p>
                   
                   <div className="mt-2">
                     <p className="text-3xl font-bold text-white group-hover:text-purple-200 transition-colors">₹5,000</p>
