@@ -48,24 +48,24 @@ const About = () => {
         <CardContent className="space-y-6 text-gray-300">
           <p className="text-base md:text-lg leading-relaxed">
             <span className="text-white font-semibold">
-              CLASSIFIED: SCOUT REGIMENT HEADQUARTERS
+              CLASSIFIED: Endurance 
             </span>
             <br />
             <br />
             The{" "}
             <span className="text-white font-semibold">
-              GeeksforGeeks X Elixir Scout Regiment
+              GeeksforGeeks X Elixir Endurance 
             </span>{" "}
-            commences its mission to reclaim humanity’s digital realm — a
-            72-hour operation to push past the limits of innovation.
+            commences its mission to find humanity's future on a digital planet — a
+            36-hour voyage to push past the limits of innovation.  
           </p>
 
           <p className="text-base md:text-lg leading-relaxed">
             This is{" "}
             <span className="text-white font-semibold">
-              humanity’s last stand
+              humanity’s last hope
             </span>{" "}
-            against the titans of outdated code and creative stagnation.
+            to survive the impending digital apocalypse.
             Developers unite, adapt, and rise beyond all boundaries.
           </p>
 

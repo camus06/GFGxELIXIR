@@ -71,12 +71,12 @@ const CTA = () => {
         </div>
 
         <h2 className="text-5xl md:text-7xl font-light tracking-tight mb-4 leading-tight">
-          Ready to Face the Titans?
+          Ready to Face the Unknown?
         </h2>
         <p className="text-lg md:text-xl text-gray-300 mb-10">
-          Join the <span className="text-white font-semibold">Survey Corps</span>.  
-          Unite with elite developers in humanity’s last stand  
-          against the titans of outdated code.
+          Join the <span className="text-white font-semibold">Stellar Corps</span>.  
+          Lock orbits with the galaxy's brightest minds, and code your way
+          to the singularity of innovation.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">

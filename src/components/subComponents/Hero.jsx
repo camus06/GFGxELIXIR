@@ -43,11 +43,11 @@ const Hero = () => {
         </Badge>
 
         <h1 className="text-4xl sm:text-6xl md:text-8xl font-extralight tracking-tight leading-[1.1]">
-          BREAK THROUGH
+          MANKIND'S LAST HOPE
         </h1>
 
         <h2 className="text-xl sm:text-3xl md:text-5xl text-white/90 tracking-wide leading-tight">
-          THE WALLS OF INNOVATION
+          AWAITS BEYOND THE TECH HORIZON
         </h2>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 w-full sm:w-auto px-2">
@@ -56,7 +56,7 @@ const Hero = () => {
             className="bg-black/80 text-white hover:bg-black px-6 sm:px-10 py-5 sm:py-7 text-base sm:text-lg font-semibold tracking-wide"
           >
             <Target className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-            Join The Scout Regiment
+            Join The Voyage
           </Button>
 
           <Button
