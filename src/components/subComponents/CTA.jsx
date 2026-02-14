@@ -66,7 +66,7 @@ const CTA = () => {
         <div className="mb-6 flex justify-center">
             <div className="relative w-24 h-24 animate-pulse">
               <Image 
-                src="/Steller A.png" 
+                src="/Steller A.webp" 
                 alt="Stellaris Icon" 
                 fill
                 className="object-contain"
@@ -87,8 +87,9 @@ const CTA = () => {
           <Button
             size="lg"
             className="bg-white text-black hover:bg-gray-200 px-10 py-7 text-lg font-semibold transform hover:scale-105 transition-all duration-300"
+            onClick={() => window.open('https://registration.example.com', '_blank')}
           >
-            Board the Ship Now 
+            Register Now
           </Button>
           <a href="https://discord.gg/yTxvuuktdZ" target="blank">
           <Button

@@ -1,7 +1,10 @@
-import { Separator } from "../ui/separator";
-import { Calendar, Clock, Github, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
+"use client";
 
-const Footer = () => {
+import Link from "next/link";
+import { Mail, Github, Twitter, Instagram , Globe} from "lucide-react";
+import { IconBrandDiscord } from "@tabler/icons-react";
+
+export default function Footer() {
   return (
     <footer className="relative bg-black/40 backdrop-blur-md border-t border-white/10 py-16">
       <div className="container mx-auto px-6">
@@ -11,92 +14,93 @@ const Footer = () => {
               <span className="text-3xl animate-pulse"></span>
               Stellaris
             </h3>
-            <p className="text-gray-400 leading-relaxed max-w-xs">
-              <span className="text-white font-medium">Give Your Heart.</span>{" "}
-              Do Not Go Gentle. Building the future with code and courage.
+            <Link
+              href="#hero"
+              className="text-gray-400 text-sm hover:text-white transition-colors"
+            >
+              ↑ BACK TO TOP
+            </Link>
+          </div>
+
+          {/* Event Info */}
+          <div className="space-y-2">
+            <h2 className="text-white font-semibold tracking-wider hover:text-blue-500 transition-colors cursor-pointer">
+              EVENT INFO
+            </h2>
+            <p className="text-gray-400 text-sm">March 28 - 29, 2026</p>
+            <p className="text-gray-400 text-sm font-semibold">36 Hours of Innovation</p>
+          </div>
+
+
+
+          {/* Quicklinks */}
+          <div className="space-y-2">
+            <h2 className="text-white font-semibold tracking-wider hover:text-blue-500 transition-colors cursor-pointer">
+              QUICKLINKS
+            </h2>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-gray-400 text-sm">
+              <Link href="#hero" className="hover:text-white hover:underline transition-all">
+                Home
+              </Link>
+              <Link href="#mission-briefing" className="hover:text-white hover:underline transition-all">
+                About
+              </Link>
+              <Link href="#tracks" className="hover:text-white hover:underline transition-all">
+                Tracks
+              </Link>
+              <Link href="#timeline" className="hover:text-white hover:underline transition-all">
+                Timeline
+              </Link>
+              <Link href="#sponsors" className="hover:text-white hover:underline transition-all">
+                Sponsors
+              </Link>
+              <Link href="#prizes" className="hover:text-white hover:underline transition-all">
+                Rewards
+              </Link>
+              <Link href="#faq" className="hover:text-white hover:underline transition-all">
+                FAQ
+              </Link>
+              <Link href="#contact" className="hover:text-white hover:underline transition-all">
+                Register
+              </Link>
+            </div>
+          </div>
+
+
+          {/* Connect */}
+          <div className="space-y-2">
+            <h2 className="text-white font-semibold tracking-wider hover:text-blue-500 transition-colors cursor-pointer">
+              CONNECT
+            </h2>
+            <p className="text-gray-400 text-sm flex items-center gap-2">
+              <Mail size={16} /> techcommunityelixir@gmail.com
             </p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4 text-white tracking-wide">
-              Event Info
-            </h4>
-            <div className="space-y-3 text-gray-400">
-              <p className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-white/70" />
-                March 28 – 29, 2026
-              </p>
-              <p className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-white/70" />
-                36 Hours of Innovation
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4 text-white tracking-wide">
-              Quick Links
-            </h4>
-            <ul className="space-y-2 text-gray-400">
-              {["About", "Tracks", "FAQs", "Sponsors"].map((link, i) => (
-                <li key={i}>
-                  <a
-                    href="#"
-                    className="hover:text-white hover:pl-1 transition-all duration-300 inline-block"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4 text-white tracking-wide">
-              Contact
-            </h4>
-            <div className="space-y-3 text-gray-400">
-              <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-white/70" />
-                hackathon@gfgxelixir.com
-              </p>
-              <div className="flex gap-5 mt-4">
-                {[
-                  { icon: Github, href: "#" },
-                  { icon: Twitter, href: "#" },
-                  { icon: Linkedin, href: "#" },
-                  { icon: Instagram, href: "https://www.instagram.com/elixirtechcommunity?igsh=MXdwc2o5cmR4MWVk" },
-                ].map(({ icon: Icon, href }, i) => (
-                  <a
-                    key={i}
-                    href={href}
-                    className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110"
-                  >
-                    <Icon className="w-6 h-6" />
-                  </a>
-                ))}
-              </div>
+            <div className="flex items-center gap-4 mt-1 text-gray-400">
+              <Link href="https://www.elixircommunity.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <Globe size={18} />
+              </Link>
+              <Link href="https://github.com/ElixirTechCommunity" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <Github size={18} />
+              </Link>
+              <Link href="https://www.instagram.com/geeksforgeeks_abesec" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <Instagram size={18} />
+              </Link>
+              <Link href="https://discord.gg/vw9d2V4x" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <IconBrandDiscord />
+              </Link>
+              <Link href="https://x.com/TheElixirTech" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                <Twitter size={18} />
+              </Link>
             </div>
           </div>
         </div>
 
-        <Separator className="bg-white/10 mb-8" />
-
-        <div className="text-center space-y-2">
-          <p className="text-gray-500 text-sm tracking-wide">
-            &copy; 2026{" "}
-            <span className="text-white">GfG × Elixir Tech Community</span>. All
-            rights reserved.
-          </p>
-          <p className="text-gray-600 text-xs">
-            Built with ❤️ for developers by developers.
-          </p>
+        {/* Bottom text */}
+        <div className="border-t border-gray-800 mt-8 pt-4 text-center text-gray-500 text-xs space-y-1">
+          <p>© 2026 GFG × ELIXIR TECH COMMUNITY. ALL RIGHTS RESERVED.</p>
+          <p>Built with <span className="text-red-500">❤️</span> by GFG x ELIXIR Team.</p>
         </div>
-
-        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-white/30 to-transparent opacity-40" />
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
