@@ -1,0 +1,161 @@
+On branch img
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   package.json
+	deleted:    public/file.svg
+	deleted:    public/fonts/Cabin/Cabin-Italic-VariableFont_wdth,wght.ttf
+	deleted:    public/fonts/Cabin/Cabin-VariableFont_wdth,wght.ttf
+	deleted:    public/fonts/Cabin/OFL.txt
+	deleted:    public/fonts/Cabin/README.txt
+	deleted:    public/fonts/Cabin/static/Cabin-Bold.ttf
+	deleted:    public/fonts/Cabin/static/Cabin-BoldItalic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin-Italic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin-Medium.ttf
+	deleted:    public/fonts/Cabin/static/Cabin-MediumItalic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin-Regular.ttf
+	deleted:    public/fonts/Cabin/static/Cabin-SemiBold.ttf
+	deleted:    public/fonts/Cabin/static/Cabin-SemiBoldItalic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_Condensed-Bold.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_Condensed-BoldItalic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_Condensed-Italic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_Condensed-Medium.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_Condensed-MediumItalic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_Condensed-Regular.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_Condensed-SemiBold.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_Condensed-SemiBoldItalic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_SemiCondensed-Bold.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_SemiCondensed-BoldItalic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_SemiCondensed-Italic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_SemiCondensed-Medium.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_SemiCondensed-MediumItalic.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_SemiCondensed-Regular.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_SemiCondensed-SemiBold.ttf
+	deleted:    public/fonts/Cabin/static/Cabin_SemiCondensed-SemiBoldItalic.ttf
+	deleted:    public/fonts/Lora/Lora-Italic-VariableFont_wght.ttf
+	deleted:    public/fonts/Lora/Lora-VariableFont_wght.ttf
+	deleted:    public/fonts/Lora/OFL.txt
+	deleted:    public/fonts/Lora/README.txt
+	deleted:    public/fonts/Lora/static/Lora-Bold.ttf
+	deleted:    public/fonts/Lora/static/Lora-BoldItalic.ttf
+	deleted:    public/fonts/Lora/static/Lora-Italic.ttf
+	deleted:    public/fonts/Lora/static/Lora-Medium.ttf
+	deleted:    public/fonts/Lora/static/Lora-MediumItalic.ttf
+	deleted:    public/fonts/Lora/static/Lora-Regular.ttf
+	deleted:    public/fonts/Lora/static/Lora-SemiBold.ttf
+	deleted:    public/fonts/Lora/static/Lora-SemiBoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/NotoSerif-Italic-VariableFont_wdth,wght.ttf
+	deleted:    public/fonts/Noto_Serif/NotoSerif-VariableFont_wdth,wght.ttf
+	deleted:    public/fonts/Noto_Serif/OFL.txt
+	deleted:    public/fonts/Noto_Serif/README.txt
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-Black.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-BlackItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-Bold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-BoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-ExtraBold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-ExtraBoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-ExtraLight.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-ExtraLightItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-Italic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-Light.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-LightItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-Medium.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-MediumItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-Regular.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-SemiBold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-SemiBoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-Thin.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif-ThinItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-Black.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-BlackItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-Bold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-BoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-ExtraBold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-ExtraBoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-ExtraLight.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-ExtraLightItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-Italic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-Light.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-LightItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-Medium.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-MediumItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-Regular.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-SemiBold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-SemiBoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-Thin.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_Condensed-ThinItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-Black.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-BlackItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-Bold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-BoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-ExtraBold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-ExtraBoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-ExtraLight.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-ExtraLightItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-Italic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-Light.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-LightItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-Medium.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-MediumItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-Regular.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-SemiBold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-SemiBoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-Thin.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_ExtraCondensed-ThinItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-Black.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-BlackItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-Bold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-BoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-ExtraBold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-ExtraBoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-ExtraLight.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-ExtraLightItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-Italic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-Light.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-LightItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-Medium.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-MediumItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-Regular.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-SemiBold.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-SemiBoldItalic.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-Thin.ttf
+	deleted:    public/fonts/Noto_Serif/static/NotoSerif_SemiCondensed-ThinItalic.ttf
+	deleted:    public/globe.svg
+	deleted:    public/next.svg
+	deleted:    public/sponsors/Devfolio.png
+	deleted:    public/sponsors/DevfolioDark.png
+	deleted:    public/sponsors/Polygon.svg
+	deleted:    public/sponsors/QuillAudit.webp
+	deleted:    public/sponsors/ethindia-logo.svg
+	deleted:    public/sponsors/ibw.svg
+	deleted:    public/vercel.svg
+	deleted:    public/window.svg
+	deleted:    src/app/favicon.ico
+	modified:   src/app/globals.css
+	deleted:    src/components/gsap-provider.jsx
+	modified:   src/components/subComponents/About.jsx
+	modified:   src/components/subComponents/CTA.jsx
+	deleted:    src/components/subComponents/CountdownTimer.jsx
+	modified:   src/components/subComponents/Hero.jsx
+	modified:   src/components/subComponents/SpotlightNavbar.jsx
+	deleted:    src/components/ui/accordion.jsx
+	deleted:    src/components/ui/badge.jsx
+	deleted:    src/components/ui/button.jsx
+	deleted:    src/components/ui/card.jsx
+	deleted:    src/components/ui/separator.jsx
+	deleted:    src/lib/data/data.js
+	deleted:    src/lib/utils.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	build_log.txt
+	files.txt
+	git_status.txt
+	package-lock.json
+	public/Steller A.webp
+	public/asteroid-cursor.webp
+	public/astro.2.webp
+	public/rocket-cursor.webp
+	public/stellaris logo.webp
+
+no changes added to commit (use "git add" and/or "git commit -a")
