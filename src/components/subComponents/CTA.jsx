@@ -78,13 +78,13 @@ const CTA = () => {
           className={`${sectionHeadingFont.className} text-5xl md:text-7xl tracking-[0.08em] uppercase mb-4 leading-tight`}
         >
           <span className="bg-gradient-to-r from-[#0080FF] via-[#0D52BD] to-[#1C05B3] bg-clip-text text-transparent">
-            Ready to Face the Titans?
+            Ready to Face the Unknown?
           </span>
         </h2>
         <p className="text-lg md:text-xl text-gray-300 mb-10">
-          Join the <span className="text-white font-semibold">Survey Corps</span>.  
-          Unite with elite developers in humanity’s last stand  
-          against the titans of outdated code.
+          Join the <span className="text-white font-semibold">Stellar Corps</span>.  
+          Lock orbits with the galaxy's brightest minds, and code your way
+          to the singularity of innovation.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -92,7 +92,7 @@ const CTA = () => {
             size="lg"
             className="bg-white text-black hover:bg-gray-200 px-10 py-7 text-lg font-semibold transform hover:scale-105 transition-all duration-300"
           >
-            Enlist Now
+            Board the Ship Now 
           </Button>
           <a href="https://discord.gg/yTxvuuktdZ" target="blank">
           <Button

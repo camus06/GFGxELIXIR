@@ -45,28 +45,12 @@ const Hero = () => {
           COMMAND BRANCH: GEEKSFORGEEKS X ELIXIR
        </Badge>
 
-        <div className="relative flex items-center justify-center w-full h-20 sm:h-30 md:h-40 lg:h-52">
-          {/* The Image is now absolute, so its "transparent border" won't push anything */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none translate-x-5 translate-y-11">
-            <Image 
-              src="/stellaris logo.png" 
-              alt="Stellaris Logo" 
-              width={1200}
-              height={400}
-              // scale-[2.5] or higher will make the visible logo huge 
-              // while the container stays small
-              className="rotate-90 scale-[3.5] sm:scale-[4.5] md:scale-[5.5] w-auto h-full object-contain"
-              priority
-            />
-          </div>
-        </div>
+        <h1 className="text-4xl sm:text-6xl md:text-8xl font-extralight tracking-tight leading-[1.1]">
+          TRANSCEND THE CODE 
+        </h1>
 
-
-
-        <h2
-          className={`${audiowide.className} text-xl sm:text-2xl md:text-3xl text-white/90 tracking-[0.05em] leading-tight`}
-        >
-          BREAK THROUGH THE WALLS OF INNOVATION
+        <h2 className="text-xl sm:text-3xl md:text-5xl text-white/90 tracking-wide leading-tight">
+          CONQUER THE COSMOS
         </h2>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 w-full sm:w-auto px-2">
@@ -75,7 +59,7 @@ const Hero = () => {
             className="bg-black/80 text-white hover:bg-black px-6 sm:px-10 py-5 sm:py-7 text-base sm:text-lg font-semibold tracking-wide"
           >
             <Target className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-            Join The Scout Regiment
+            Join The Voyage
           </Button>
 
           <Button

@@ -8,12 +8,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-10 mb-12">
           <div>
             <h3 className="text-2xl mb-3 text-white flex items-center gap-2 font-light tracking-wide">
-              <span className="text-3xl animate-pulse">⚔️</span>
+              <span className="text-3xl animate-pulse"></span>
               Stellaris
             </h3>
             <p className="text-gray-400 leading-relaxed max-w-xs">
               <span className="text-white font-medium">Give Your Heart.</span>{" "}
-              Battling titans. Building the future with code and courage.
+              Do Not Go Gentle. Building the future with code and courage.
             </p>
           </div>
 

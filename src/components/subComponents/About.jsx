@@ -102,26 +102,26 @@ const About = () => {
                 <CardContent className="space-y-6 text-gray-300">
                 <p className={`${aboutBodyFont.className} text-base md:text-lg leading-relaxed`}>
                     <span className="font-semibold bg-gradient-to-r from-[#0080FF] via-[#0D52BD] to-[#1C05B3] bg-clip-text text-transparent">
-                    CLASSIFIED: SCOUT REGIMENT HEADQUARTERS
+                    CLASSIFIED: Stellars Corps
                     </span>
                     <br />
                     <br />
                     The{" "}
                     <span className="font-semibold bg-gradient-to-r from-[#0080FF] via-[#0D52BD] to-[#1C05B3] bg-clip-text text-transparent">
-                    GeeksforGeeks X Elixir Scout Regiment
+                    GeeksforGeeks X Elixir Space Station
                     </span>{" "}
-                    commences its mission to reclaim humanity’s digital realm, a
-                    36-hour operation to push past the limits of innovation.
+                    commences its mission to find Mankind's next frontier, a
+                    36-hour journey to push past the limits of innovation.
                 </p>
 
-                <p className={`${aboutBodyFont.className} text-base md:text-lg leading-relaxed`}>
-                    This is{" "}
-                    <span className="font-semibold bg-gradient-to-r from-[#0080FF] via-[#0D52BD] to-[#1C05B3] bg-clip-text text-transparent">
-                    humanity’s last stand
-                    </span>{" "}
-                    against the titans of outdated code and creative stagnation.
-                    Developers unite, adapt, and rise beyond all boundaries.
-                </p>
+          <p className="text-base md:text-lg leading-relaxed">
+            This is{" "}
+            <span className="text-white font-semibold">
+              humanity’s last stand
+            </span>{" "}
+            against the gravity of code and creative void.
+            Developers unite, adapt, and rise beyond all horizons.
+          </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-left">
                     {aboutData.map((item, idx) => (
