@@ -62,7 +62,7 @@ const MissionTimeline = () => {
       ),
     },
     {
-      title: "29 Mar",
+      title: "28 Mar",
       content: (
         <div>
           <p className="mb-4 text-xs font-normal text-white/80 md:text-sm">

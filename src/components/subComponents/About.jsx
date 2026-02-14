@@ -99,6 +99,7 @@ const About = () => {
                 <Separator className="bg-white/20 mb-4" />
                 </CardHeader>
 
+<<<<<<< HEAD
                 <CardContent className="space-y-6 text-gray-300">
                 <p className={`${aboutBodyFont.className} text-base md:text-lg leading-relaxed`}>
                     <span className="font-semibold bg-gradient-to-r from-[#0080FF] via-[#0D52BD] to-[#1C05B3] bg-clip-text text-transparent">
@@ -113,14 +114,46 @@ const About = () => {
                     commences its mission to find Mankind's next frontier, a
                     36-hour journey to push past the limits of innovation.
                 </p>
+=======
+      <div
+        ref={contentRef}
+        className="relative z-10 max-w-xl p-6 md:p-10  shadow-2xl rounded-2xl"
+      >
+        <CardHeader>
+          <CardTitle className="text-4xl md:text-5xl mb-4 font-light tracking-wider">
+            Mission Briefing
+          </CardTitle>
+          <Separator className="bg-white/20 mb-4" />
+        </CardHeader>
+
+        <CardContent className="space-y-6 text-gray-300">
+          <p className="text-base md:text-lg leading-relaxed">
+            <span className="text-white font-semibold">
+              CLASSIFIED: Endurance 
+            </span>
+            <br />
+            <br />
+            The{" "}
+            <span className="text-white font-semibold">
+              GeeksforGeeks X Elixir Endurance 
+            </span>{" "}
+            commences its mission to find humanity's future on a digital planet — a
+            36-hour voyage to push past the limits of innovation.  
+          </p>
+>>>>>>> 9b2c1d9dcf9f3f1ea0f3363941ab1495ddece456
 
           <p className="text-base md:text-lg leading-relaxed">
             This is{" "}
             <span className="text-white font-semibold">
-              humanity’s last stand
+              humanity’s last hope
             </span>{" "}
+<<<<<<< HEAD
             against the gravity of code and creative void.
             Developers unite, adapt, and rise beyond all horizons.
+=======
+            to survive the impending digital apocalypse.
+            Developers unite, adapt, and rise beyond all boundaries.
+>>>>>>> 9b2c1d9dcf9f3f1ea0f3363941ab1495ddece456
           </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-left">
